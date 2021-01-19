@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>jQUERY UI - Krafty Foods</title>
+  <!-- VIEWPORT -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--RESET-->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+
+  <!-- jQUERY -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <!-- jQUERY UI -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- TABS -->
+  <script>
+  $( function() {
+    $( ".tabs" ).tabs({
+		hide:{effect: "fade"},
+		show:{effect: "fade"}
+	});
+  } );
+</script>
+
+  <!-- ACCORDIONS -->
+  <script>
+  $( function() {
+    $( ".accordion" ).accordion({
+      heightStyle: "content",
+	  active: false,
+	  collapsible: true
+    });
+  } );
+  </script>
+
+  <!-- TOOLTIP -->
+  <script>
+  $( function() {
+    $( document ).tooltip({
+      track: true,
+	  tooltipClass: "myTooltip"
+    });
+  } );
+  </script>
+
+  <!-- DIAOLOG -->
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog({
+	  modal: true,
+      autoOpen: false,
+      show: {effect: "blind", duration: 400},
+      hide: {effect: "blind", duration: 400}
+    });
+ 
+    $( "#goTerms" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  </script>
+
+  <!--SITE STYLES-->
+  <link href="css/krafty-styles.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+  <main id="container">
+    <header id="header"> 
+      
+      <!-- LOGO --> 
+      <img src="images/logo.gif" alt="" class="fl" id="logo"/> 
+      
+      <!-- NAV -->
+      <nav id="mainNav" class="fr"> <a href="_1_queso-dip.html" class="current">Queso Dip</a> | <a href="_2_queso-dip-extreme.html">Queso Dip Extreme</a> </nav>
+      <div class="clear"></div>
+    </header>
+    <div id="feature">
+      <h1>Famous Queso Dip </h1>
+      <p>Recipe by Thomas Borzecki</p>
+    </div>
+    
+    <!-- ====CONTENT==== --> 
+    <!--2/3 + 1/3-->
+    <section class="col23 fl" id="content"> 
+      
+      <!-- IMAGE 1 - TOOLTIP--> 
+      <img src="images/dip.jpg" class="responsive" alt="" title="Our Famous Queso Dip!"/> 
+      
+      <!-- TABS - DIRECTIONS  -->
+      <div class="tabs">
+        <ul class="tabsNav">
+          <li><a href="#shopping"><i class="fa fa-shopping-cart"></i> Shopping List</a></li>
+          <li><a href="#prepping"><i class="fa fa-cutlery"></i> Prepping</a></li>
+          <li><a href="#directions"><i class="fa fa-list-ol"></i> Directions</a></li>
+        </ul>
+        <div id="shopping">
+          <ul>
+            <li> 1 pkg. (450 g) Velveeta Process Cheese Product, cut into 1/2-inch cubes </li>
+            <li>1 can (19 fl oz/540 mL) diced tomatoes, well drained </li>
+            <li>1 can (4.5 oz/127 g) chopped green chiles, well drained </li>
+          </ul>
+        </div>
+        <div id="prepping">
+          <ul>
+            <li> Prep Time -         10min.</li>
+            <li>Total Time
+              10min. </li>
+            <li>Servings -       
+              28 servings, 2 Tbsp. (30 mL) each </li>
+          </ul>
+          <p>This warm cheese dip is known for its simplicity - with only 3 ingredients and 10 minutes of prep, our Famous Queso Dip couldn’t be easier. It also couldn’t be tastier - it’s one of our favourite warm appetizer dips! </p>
+        </div>
+        <div id="directions">
+          <ul>
+            <li> Combine ingredients in 2-L microwaveable bowl. </li>
+            <li>Microwave on HIGH 5 min. or until Velveeta is completely melted and mixture is well blended, stirring after 3 min. </li>
+          </ul>
+        </div>
+      </div>
+    </section> <!-- END 2/3 CONTENT--> 
+    
+    <!-- ====SIDEBAR==== -->
+    <aside class="col13 fl" id="sidebar"><!-- DIP 1 --> 
+      <img src="images/sidebar-dip-1.jpg" class="responsive" alt="" title="Add some variety!"/> 
+      
+      <!-- ACCORDION 1 -->
+      <div class="accordion">
+        <h3><i class="fa fa-check"></i> Try a trio!</h3>
+        <div>
+          <p>Looking for an appetizer with all-family appeal? With three different cheeses, fresh vegetable dippers and three kinds of dip, this cheese platter has something for everyone. </p>
+        </div>
+      </div><!-- END ACCORDION -->
+      <h3> Try Potatoes too!</h3>
+      
+      <!-- DIP 2 --> 
+      <img src="images/sidebar-dip-2.jpg" class="responsive" alt="" title="Frying is delicious!"/> 
+      
+      <!-- ACCORDION  2 -->
+      <div class="accordion">
+        <h3><i class="fa fa-bolt"></i> Add some Pizzazz..</h3>
+        <div>
+          <p> A touch of mustard and a creamy dressing give this potato salad its downhome appeal. Make this potato salad recipe ahead of time for stress-free entertaining. </p>
+        </div>
+      </div><!-- END ACCORDION -->
+      
+      
+      <!-- DIALOG -->      
+      <div id="dialog" title="Terms and Conditions">
+        <h3>WELCOME TO THIS KRAFT FOODS-OPERATED WEB SITE!</h3>
+        <p>We've designed our websites to be useful, informative, and fun. We hope we've succeeded -- and we hope you'll let us know how we can make them even better.</p>
+        <p>All we ask in return is that you abide by the Terms and Conditions that follow. Please read them carefully, because when you use our sites, you automatically agree to them.</p>
+        <h3>THANKS FOR VISITING!</h3>
+        <h5>RESTRICTIONS ON YOUR USE OF THE MATERIALS IN OUR SITES</h5>
+        <p>(1) You agree not to re-use material from this website or from any other site operated by Kraft (each a “Site”). In particular, you agree not to copy, distribute, republish, reproduce, upload, post, or transmit anything, in any form or by any means, unless a feature on our site specifically gives you permission (like our Pin It function) or you get our written consent first.</p>
+      </div>
+      <button id="goTerms"><i class="fa fa-check-circle"></i> Terms and Conditions</button>
+    </aside>
+    <!-- END SIDEBAR -->
+    
+    <div class="clear"></div>
+    
+  </main><!--END #CONTAINER--> 
+
+  <!-- FOOTER - SOCIAL-->
+  <footer id="footer"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-youtube"></i></a> </footer>
+  
+  
+</body>
+</html>

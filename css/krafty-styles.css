@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/************************************GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway');
+
+/************************************GLOBAL*/
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color:rgba(0,76,143,1.00);
+}
+li {
+	list-style-image: url(../images/check.png);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Permanent Marker', cursive;
+	color:rgba(0,76,143,1.00);
+	
+}
+
+/**************************************LAYOUT*/
+#container {
+	max-width: 1280px;
+	min-width: 481px;
+	width:80%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom:20px;
+	background-color: #FFF;
+}
+#logo {
+	max-width:100%;
+	height:auto;
+}
+#mainNav {
+	padding-top:120px;
+}
+#header {
+	background-image:url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position:center;
+
+}
+
+#feature {
+	margin:1%;
+	}
+
+#footer {
+	height:80px;
+	line-height:80px;
+	text-align: center;
+	background:url(../images/bg-footer.jpg);
+}
+#footer i {
+	border:1px solid #FFF;
+	padding:5px;
+	border-radius:50%;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	color:#FFF;
+}
+#footer i:hover {
+	background-color:rgba(255,255,255,0.30);
+}
+
+/***************************************COLUMNS*/
+
+.col12,.col13, .col23, .col33 {
+	margin: 1%;
+	padding: 1%;
+	box-shadow:0 0 6px rgba(0,0,0,0.3);
+}
+.col12 {width: 46%;}
+.col13 {width: 29.3333%;}
+.col23 {width: 62.6666%;}
+.col33 {}
+/**********************************REUSABLE CLASSES*/
+
+.fl {float:left;}
+.fr {float:right;}
+.clear {clear:both;}
+.current {color:#e80e21;cursor:default;}
+
+
+/***********************************RESPONSIVE*****/
+.responsive {
+	width:100%;
+	height:auto;
+}
+
+
+
+/***********************************OVERRIDES***/
+/*TABS*/
+.tabs .tabsNav, #tabsVertical .tabsNav {
+	background: url(../images/bg-button.png);
+}
+.ui-tabs {
+	border:none!important;
+	font-family: 'Raleway', sans-serif;
+}
+.ui-state-active {
+	background:#FFF!important;
+	border-color:#C5C5C5!important;
+	outline:none!important;
+}
+.ui-state-active .ui-tabs-anchor {
+	outline:none!important;
+}
+.ui-state-active a, .accordion h3 {
+	color:#e80e21!important;
+}
+.ui-tabs-panel li, .ui-accordion-content li {
+	margin-bottom:15px;
+}
+
+
+/*VERTICAL TABS*/
+.ui-tabs-vertical {
+	width:99%;
+}
+.ui-tabs-vertical .ui-tabs-nav {
+	width:30%;
+}
+.ui-tabs-vertical .ui-tabs-panel {
+	width:60%;	
+}
+
+
+/*ACCORDION*/
+.accordion h3 {
+background: rgba(240,249,255, 0.5);
+background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(68,108,142,0.5) 100%);
+background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(68,108,142,0.5) 100%);
+background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(68,108,142,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#446c8e',GradientType=0 );
+}
+.accordion div {
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/*TOOLITIP*/
+.myTooltip {
+	background: url(../images/bg-button.png) #FFF;
+	font-family: 'Permanent Marker', cursive;
+	
+}
+
+
+/*DIALOG*/
+#goTerms {
+	margin-top:50px;
+	padding:10px;
+	border-radius: 4px;
+	background: url(../images/bg-button.png);
+	border:none;
+	border:1px solid #CCC;
+	font-family: 'Permanent Marker', cursive;
+	cursor:pointer;
+}
+#goTerms:hover {
+	color:#F00;
+}
+#dialog {
+	font-family: 'Raleway', sans-serif;
+}
+.ui-dialog {
+	width:50%!important;
+}
+.ui-dialog-titlebar {
+	font-family: 'Permanent Marker', cursive!important;
+	background: url(../images/bg-button.png) #FFF;
+}
+.ui-dialog-titlebar-close { 
+	width: 40px !important; 
+	height: 42px !important; 
+	top: 25% !important; 
+	right:0!important;
+}
+
+
+
+/***********************MEDIA QUERIES******/
+
+@media screen and (max-width:480px) {
+	/*LAYOUT*/
+#container {
+	max-width: 480px;
+	min-width: 320px;
+	width:90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom:20px;
+}
+	#content, #sidebar {
+		display:block;
+		float:none!important;
+}
+
+#footer {
+	
+}
+
+/*COLUMNS*/
+
+.col12, .col13, .col23, .col33, .col14, .col15, .col16 {
+	display:block;
+	float:none!important;
+}
+
+.col13 {width: 96%;}
+.col23 {width: 96%;}
+.col33 {}
+.col12 {width: 96%;}
+.col14 {width: 96%;}
+.col15 {width: 96%;}
+.col16 {width: 96%;}
+
+
+}
